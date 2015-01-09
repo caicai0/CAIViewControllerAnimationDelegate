@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yUH-W6-f94">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="MuT-H7-opl">
+            <objects>
+                <navigationController id="yUH-W6-f94" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qN4-5q-ExG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WGd-Sq-PnN" kind="relationship" relationship="rootViewController" id="cqu-jY-Ats"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFR-Gy-72b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="495"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jia-t8-wXz">
+            <objects>
+                <viewController id="WGd-Sq-PnN" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uKl-Sf-cRG"/>
+                        <viewControllerLayoutGuide type="bottom" id="FWR-qG-u5q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZaR-Yg-Cc1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="b2k-eL-hoH">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b2k-eL-hoH" firstAttribute="top" secondItem="uKl-Sf-cRG" secondAttribute="bottom" id="4Me-3E-1fl"/>
+                            <constraint firstAttribute="trailing" secondItem="b2k-eL-hoH" secondAttribute="trailing" id="Ocr-rw-lGa"/>
+                            <constraint firstItem="FWR-qG-u5q" firstAttribute="top" secondItem="b2k-eL-hoH" secondAttribute="bottom" id="Z3x-bJ-tox"/>
+                            <constraint firstItem="b2k-eL-hoH" firstAttribute="leading" secondItem="ZaR-Yg-Cc1" secondAttribute="leading" id="aCk-1W-2x9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ep0-Qf-DrV">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="w1l-KS-95A">
+                            <connections>
+                                <action selector="back:" destination="WGd-Sq-PnN" id="5Zz-xC-4YL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="next" id="2aw-g5-acM">
+                            <connections>
+                                <segue destination="yUH-W6-f94" kind="presentation" id="Wtv-Oy-RIh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="b2k-eL-hoH" id="DUJ-eC-edS"/>
+                        <outlet property="transitionDelegate" destination="3Wa-hM-F3S" id="eqO-8u-aSR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edS-pk-4Qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3Wa-hM-F3S" customClass="CAIViewControllerAnimationDelegate"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="495"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="1242" height="2208"/>
+    </resources>
+</document>
